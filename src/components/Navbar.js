@@ -1,13 +1,14 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/">
           {props.title}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,29 +26,23 @@ export default function Navbar(props) {
             style={{ "--bs-scroll-height": "100px" }}
           >
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <Link className="nav-link active" aria-current="page" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Link
-              </a>
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
             </li>
           </ul>
-          {/* <form className="d-flex">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form> */}
           <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
-            <input className="form-check-input" type="checkbox" onClick={props.toggleMode} id="flexSwitchCheckDefault" />
+            <input 
+              className="form-check-input" 
+              type="checkbox" 
+              onClick={props.toggleMode} 
+              id="flexSwitchCheckDefault" 
+            />
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Toggle Mode</label>
           </div>
         </div>
@@ -55,9 +50,11 @@ export default function Navbar(props) {
     </nav>
   );
 }
+
 Navbar.propTypes = {
   title: PropTypes.string
-}
+};
+
 Navbar.defaultProps = {
   title: "Default Title"
-}
+};

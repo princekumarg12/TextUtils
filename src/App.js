@@ -1,12 +1,15 @@
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import About from './components/About';
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import React, { useState } from "react";
 
 function App() {
   const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
+
   const editAlert = (message, type) => {
     setAlert({
       msg: message,
@@ -16,23 +19,29 @@ function App() {
       setAlert(null);
     }, 1500);
   }
+
   const toggleMode = () => {
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "black";
       editAlert("Dark mode is enabled", "success");
-    }
-    else {
+    } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
       editAlert("Light mode is enabled", "success");
     }
   }
+
   return (
     <>
-      <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
-      <TextForm editAlert={editAlert} heading="Enter the Text" mode={mode} />
+      <Router>
+        <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} />
+        <Alert alert={alert} />
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<TextForm editAlert={editAlert} heading="Enter the Text" mode={mode} />} />
+        </Routes>
+      </Router>
     </>
   );
 }
