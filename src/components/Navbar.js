@@ -6,7 +6,7 @@ export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="#">
           {props.title}
         </a>
         <button
@@ -26,12 +26,12 @@ export default function Navbar(props) {
             style={{ "--bs-scroll-height": "100px" }}
           >
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <a className="nav-link active" aria-current="page" href="#">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">
+              <a className="nav-link" href="#">
                 About
               </a>
             </li>
