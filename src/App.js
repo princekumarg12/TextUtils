@@ -37,7 +37,7 @@ function App() {
       {/* <Router> */}
         <Navbar title='TextUtils' mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
-        <TextForm editAlert={editAlert} heading="Enter the Text" mode={mode} />
+        <TextForm editAlert={editAlert} heading="Try Text Utility convert text to Uppercase,Lowercase,Copy and Clear" mode={mode} />
         {/* <Routes> */}
           {/* <Route path="/about" element={<About />} /> */}
           {/* <Route path="/" element={<TextForm editAlert={editAlert} heading="Enter the Text" mode={mode} />} /> */}

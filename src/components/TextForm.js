@@ -24,7 +24,7 @@ export default function TextForm(props) {
   return (
     <div className="container my-4" style={{ background: props.mode === 'dark' ? "#403f3f" : "white", color: props.mode === "dark" ? "white" : "black", }}>
       <div className="form-floating">
-        <h1>{props.heading}</h1>
+        <h3>{props.heading}</h3>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -41,7 +41,7 @@ export default function TextForm(props) {
         <button disabled={text.length === 0} className="btn btn-primary mx-1 my-1" onClick={handleCopyClick}>Copy</button>
         <div className="my-3">
           <h5>Your Text Summary</h5>
-          <p>{text.split(" ").filter((element) => { return element.length !== 0 }).length} word and {text.length} characters</p>
+          <p>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} word and {text.length} characters</p>
         </div>
         <div className="my-3">
           <h4>Preview</h4>
