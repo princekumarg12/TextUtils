@@ -1,71 +1,79 @@
 ![Screenshot from 2024-10-27 19-36-41](https://github.com/user-attachments/assets/e68c03aa-5305-42fa-90da-1b672e07339d)
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Text Utility Website
 
-In the project directory, you can run:
+A simple, interactive React.js application for analyzing and manipulating text. This website allows users to count words and letters, convert text to uppercase or lowercase, and perform other text transformations.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Word Count**: Instantly count the number of words in the provided text.
+- **Character Count**: Display the total number of characters, including spaces.
+- **Uppercase Conversion**: Transform all text to uppercase with a single click.
+- **Lowercase Conversion**: Convert the text to lowercase.
+- **Text Manipulation**: Easy-to-use options to enhance text readability and style.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+- **Frontend**: React.js, CSS
+- **Tools**: React hooks, ES6 syntax
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To set up the project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/princekumarg12/TextUtils.git
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Navigate to the project folder:
 
-### `npm run eject`
+   ```bash
+   cd text-utility-website
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the necessary dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+The website will be running at `http://localhost:3000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Enter or paste the text you want to analyze or manipulate.
+2. Select options to count words, count letters, or convert text to uppercase/lowercase.
+3. The results update in real-time.
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+text-utility-website
+â”œâ”€â”€ public
+â”œâ”€â”€ src
+â”‚   â”œâ”€â”€ components
+â”‚   â”‚   â””â”€â”€ TextUtils.js      # Core functionality
+â”‚   â”œâ”€â”€ App.js                # Main app component
+â”‚   â”œâ”€â”€ index.js              # App entry point
+â”‚   â””â”€â”€ App.css               # Styling
+â””â”€â”€ README.md
+```
 
-### Analyzing the Bundle Size
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Additional text transformations, like title case and sentence case.
+- Dark mode for user convenience.
+- Character frequency analysis.
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. Feel free to use, modify, and distribute this project as you like!
