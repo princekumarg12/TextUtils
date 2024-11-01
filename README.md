@@ -57,16 +57,6 @@ The website will be running at `http://localhost:3000`.
 ## Project Structure
 
 ```
-text-utility-website
-â”œâ”€â”€ public
-â”œâ”€â”€ src
-â”‚   â”œâ”€â”€ components
-â”‚   â”‚   â””â”€â”€ TextUtils.js      # Core functionality
-â”‚   â”œâ”€â”€ App.js                # Main app component
-â”‚   â”œâ”€â”€ index.js              # App entry point
-â”‚   â””â”€â”€ App.css               # Styling
-â””â”€â”€ README.md
-```
 
 ## Future Improvements
 
